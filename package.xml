@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd"
+            schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>slithers_ros2</name>
+  <version>0.1.0</version>
+  <description>
+    ROS 2 wrapper for the SLITHERS library (Lie theory-based IK planner for
+    mobile manipulators). Provides a node that generates reference paths,
+    solves IK via the slithers library, and publishes end-effector poses and
+    joint velocity commands.
+  </description>
+
+  <!-- Maintainer -->
+  <maintainer email="sks4zk@virginia.edu">Siddharth Kumar</maintainer>
+
+  <!-- License -->
+  <license>MIT</license>
+
+  <!-- Build tool -->
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <!-- Build dependencies (needed at compile time) -->
+  <build_depend>rclcpp</build_depend>
+  <build_depend>geometry_msgs</build_depend>
+  <build_depend>std_msgs</build_depend>
+  <build_depend>libeigen3-dev</build_depend>
+  <build_depend>slithers</build_depend>
+
+  <!-- Execution dependencies (needed at runtime) -->
+  <exec_depend>rclcpp</exec_depend>
+  <exec_depend>geometry_msgs</exec_depend>
+  <exec_depend>std_msgs</exec_depend>
+  <exec_depend>libeigen3-dev</exec_depend>
+  <exec_depend>slithers</exec_depend>
+  <exec_depend>launch_ros</exec_depend>
+
+  <!-- Export ament_cmake as the build type -->
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>
